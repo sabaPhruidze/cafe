@@ -1,11 +1,13 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
+import { ContainerApp } from "./components/Style/ContainerApp";
+import { BGI } from "./components/Style/BGI";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start w ofrking on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <ContainerApp>
+      <StatusBar style="dark" />
+      <BGI source={require("./assets/images/beansBackground1.png")} />
+    </ContainerApp>
   );
 }
