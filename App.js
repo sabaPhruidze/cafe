@@ -13,7 +13,7 @@ export default function App() {
       <SafeAreaViewApp>
         <View>
           <AvatarImg source={require("./assets/images/avatar.png")} />
-          <View></View>
+          <AvatarDiv>gr</AvatarDiv>
         </View>
       </SafeAreaViewApp>
     </ContainerApp>
