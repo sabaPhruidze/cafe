@@ -17,7 +17,9 @@ export default function App() {
       <BGI source={require("./assets/images/beansBackground1.png")} />
       <SafeAreaViewApp>
         <AvatarImg source={require("./assets/images/avatar.png")} />
-        <AvatarDiv></AvatarDiv>
+        <AvatarDiv>
+          <Location source={require("./assets/icons/location.png")} />
+        </AvatarDiv>
       </SafeAreaViewApp>
     </ContainerApp>
   );
