@@ -3,13 +3,17 @@ import styled from "styled-components";
 import { Icon } from "./components/Style/Icon";
 import { SafeAreaFirstLine } from "./components/Style/SafeAreaFirstLine";
 import { StatusBar } from "expo-status-bar";
-import { View, Text } from "react-native";
+import { TouchableOpacity } from "react-native";
 import { ContainerApp } from "./components/Style/ContainerApp";
 import { BGI } from "./components/Style/BGI";
 import { AvatarImg } from "./components/Style/AvatarImg";
 import { SafeAreaViewApp } from "./components/Style/SafeAreaViewApp";
 import { AvatarDiv } from "./components/Style/AvatarDiv";
 import { AvatarText } from "./components/Style/AvatarText";
+import { SBWrapper } from "./components/Style/SBWrapper";
+import { SBContainer } from "./components/Style/SBContainer";
+import { Search } from "./components/Style/Search";
+import { Button } from "./components/Style/Button";
 export default function App() {
   return (
     <ContainerApp>
@@ -29,6 +33,17 @@ export default function App() {
           />
         </SafeAreaFirstLine>
         {/* search bar */}
+        <SBWrapper>
+          <SBContainer>
+            <Search placeholder="Search" />
+            <Button>
+              <Icon
+                source={require("./assets/icons/search.png")}
+                style={{ width: 25, height: 25 }}
+              />
+            </Button>
+          </SBContainer>
+        </SBWrapper>
       </SafeAreaViewApp>
     </ContainerApp>
   );
