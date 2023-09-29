@@ -1,8 +1,10 @@
 import { StatusBar } from "expo-status-bar";
-import { SafeAreaView, View } from "react-native";
+import { View, Text } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 import { ContainerApp } from "./components/Style/ContainerApp";
 import { BGI } from "./components/Style/BGI";
 import { AvatarImg } from "./components/Style/AvatarImg";
+import { SafeAreaViewApp } from "./components/Style/SafeAreaViewApp";
 import styled from "styled-components";
 
 export default function App() {
@@ -11,20 +13,13 @@ export default function App() {
       <StatusBar style="dark" />
       <BGI source={require("./assets/images/beansBackground1.png")} />
       <SafeAreaViewApp>
-        <View>
-          <AvatarImg source={require("./assets/images/avatar.png")} />
-          <AvatarDiv>gr</AvatarDiv>
-        </View>
+        <AvatarImg source={require("./assets/images/avatar.png")} />
       </SafeAreaViewApp>
     </ContainerApp>
   );
 }
 
-const SafeAreaViewApp = styled.SafeAreaView`
-  display: flex;
-  flex: 1;
-`;
-const AvatarDiv = styled.Div`
+const AvatarDiv = styled.View`
   display: flex;
   flex-direction: row;
   align-items: center;
