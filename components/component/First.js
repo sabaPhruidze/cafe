@@ -14,7 +14,7 @@ import { Search } from "../style/Search";
 import { Button } from "../style/Button";
 import { CategoriesMainDiv } from "../style/CategoriesMainDiv";
 import { categories } from "../data/Data";
-
+import { CategoriesButton } from "../style/CategoriesButton";
 import { TouchableOpacity, Text, FlatList } from "react-native";
 // import sfe from "../../assets";
 export default function First() {
@@ -57,9 +57,9 @@ export default function First() {
             style={{ overflow: "visible" }}
             renderItem={({ item }) => {
               return (
-                <TouchableOpacity>
-                  <Text>{item.title}</Text>
-                </TouchableOpacity>
+                <CategoriesButton>
+                  <Text style={{ fontWeight: "bold" }}>{item.title}</Text>
+                </CategoriesButton>
               );
             }}
           />
