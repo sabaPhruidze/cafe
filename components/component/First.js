@@ -1,20 +1,19 @@
 import styled from "styled-components";
-
-import { Icon } from "../Style/Icon";
-import { SafeAreaFirstLine } from "../Style/SafeAreaFirstLine";
+import { ContainerApp } from "../style/ContainerApp";
+import { Icon } from "../style/Icon";
+import { SafeAreaFirstLine } from "../style/SafeAreaFirstLine";
 import { StatusBar } from "expo-status-bar";
-import { TouchableOpacity } from "react-native";
-import { ContainerApp } from "../Style/ContainerApp";
-import { BGI } from "../Style/BGI";
-import { AvatarImg } from "../Style/AvatarImg";
-import { SafeAreaViewApp } from "../Style/SafeAreaViewApp";
-import { AvatarDiv } from "../Style/AvatarDiv";
-import { AvatarText } from "../Style/AvatarText";
-import { SBWrapper } from "../Style/SBWrapper";
-import { SBContainer } from "../Style/SBContainer";
-import { Search } from "../Style/Search";
-import { Button } from "../Style/Button";
-import sfe from "../../assets";
+
+import { BGI } from "../style/BGI";
+import { AvatarImg } from "../style/AvatarImg";
+import { SafeAreaViewApp } from "../style/SafeAreaViewApp";
+import { AvatarDiv } from "../style/AvatarDiv";
+import { AvatarText } from "../style/AvatarText";
+import { SBWrapper } from "../style/SBWrapper";
+import { SBContainer } from "../style/SBContainer";
+import { Search } from "../style/Search";
+import { Button } from "../style/Button";
+// import sfe from "../../assets";
 export default function First() {
   return (
     <ContainerApp>
@@ -45,6 +44,7 @@ export default function First() {
             </Button>
           </SBContainer>
         </SBWrapper>
+        {/* categories */}
       </SafeAreaViewApp>
     </ContainerApp>
   );
