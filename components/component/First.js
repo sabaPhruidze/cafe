@@ -3,7 +3,6 @@ import { ContainerApp } from "../style/ContainerApp";
 import { Icon } from "../style/Icon";
 import { SafeAreaFirstLine } from "../style/SafeAreaFirstLine";
 import { StatusBar } from "expo-status-bar";
-
 import { BGI } from "../style/BGI";
 import { AvatarImg } from "../style/AvatarImg";
 import { SafeAreaViewApp } from "../style/SafeAreaViewApp";
@@ -13,6 +12,10 @@ import { SBWrapper } from "../style/SBWrapper";
 import { SBContainer } from "../style/SBContainer";
 import { Search } from "../style/Search";
 import { Button } from "../style/Button";
+import { CategoriesMainDiv } from "../style/CategoriesMainDiv";
+import { categories } from "../data/Data";
+
+import { TouchableOpacity, Text, FlatList } from "react-native";
 // import sfe from "../../assets";
 export default function First() {
   return (
@@ -45,6 +48,22 @@ export default function First() {
           </SBContainer>
         </SBWrapper>
         {/* categories */}
+        <CategoriesMainDiv>
+          <FlatList
+            horizontal
+            showHorizontalScrollIndicator={false}
+            data={categories}
+            keyExtractor={(item) => item.id}
+            style={{ overflow: "visible" }}
+            renderItem={({ item }) => {
+              return (
+                <TouchableOpacity>
+                  <Text>{item.title}</Text>
+                </TouchableOpacity>
+              );
+            }}
+          />
+        </CategoriesMainDiv>
       </SafeAreaViewApp>
     </ContainerApp>
   );
