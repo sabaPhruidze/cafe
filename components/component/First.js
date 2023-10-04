@@ -13,14 +13,10 @@ import { SBWrapper } from "../style/SBWrapper";
 import { SBContainer } from "../style/SBContainer";
 import { Search } from "../style/Search";
 import { Button } from "../style/Button";
-import { CategoriesMainDiv } from "../style/CategoriesMainDiv";
-import { categories } from "../data/Data";
-import { CategoriesButton } from "../style/CategoriesButton";
-import { TouchableOpacity, Text, FlatList } from "react-native";
 
+import FlatLIstCategory from "./FlatLIstCategory";
 // import sfe from "../../assets";
 export default function First() {
-  const [activeCategory, setActiveCategory] = useState(1);
   return (
     <ContainerApp>
       <StatusBar style="dark" />
@@ -51,37 +47,8 @@ export default function First() {
           </SBContainer>
         </SBWrapper>
         {/* categories */}
-        <CategoriesMainDiv>
-          <FlatList
-            horizontal
-            showsHorizontalScrollIndicator={false}
-            data={categories}
-            keyExtractor={(item) => item.id}
-            style={{ overflow: "visible" }}
-            renderItem={({ item }) => {
-              let isActive = item.id == activeCategory;
-              let activeBackground = isActive
-                ? "#d4a574"
-                : "rgba(0, 0, 0, 0.07)";
-              let activeText = isActive ? "white" : "black";
-              return (
-                <CategoriesButton
-                  onPress={() => setActiveCategory(item.id)}
-                  style={{ backgroundColor: activeBackground }}
-                >
-                  <Text
-                    style={{
-                      fontWeight: isActive ? "bold" : "500",
-                      color: activeText,
-                    }}
-                  >
-                    {item.title}
-                  </Text>
-                </CategoriesButton>
-              );
-            }}
-          />
-        </CategoriesMainDiv>
+        <FlatLIstCategory />
+        {/* coffee cards */}
       </SafeAreaViewApp>
     </ContainerApp>
   );
