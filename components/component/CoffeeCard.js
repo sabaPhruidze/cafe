@@ -1,11 +1,22 @@
-import { View, Text } from "react-native";
+import { View, Text, Image } from "react-native";
 import React from "react";
+import { CardDiv } from "../style/CardDiv";
+import { CardImage } from "../style/CardImage";
 
-const CoffeeCard = () => {
+const CoffeeCard = ({ item }) => {
   return (
-    <View>
-      <Text>CoffeeCard</Text>
-    </View>
+    <CardDiv>
+      <View
+        style={{
+          shadowColor: "black",
+          shadowRadius: 30,
+          shadowOffset: { width: 0, height: 40 },
+          shadowOpacity: 0.8,
+        }}
+      >
+        <CardImage source={item.image} />
+      </View>
+    </CardDiv>
   );
 };
 
