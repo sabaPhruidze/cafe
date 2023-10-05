@@ -13,6 +13,7 @@ import { SBWrapper } from "../style/SBWrapper";
 import { SBContainer } from "../style/SBContainer";
 import { Search } from "../style/Search";
 import { Button } from "../style/Button";
+import CoffeeCard from "./CoffeeCard";
 
 import FlatLIstCategory from "./FlatLIstCategory";
 // import sfe from "../../assets";
@@ -49,6 +50,7 @@ export default function First() {
         {/* categories */}
         <FlatLIstCategory />
         {/* coffee cards */}
+        <CoffeeCard />
       </SafeAreaViewApp>
     </ContainerApp>
   );

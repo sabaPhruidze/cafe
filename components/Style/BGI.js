@@ -4,5 +4,5 @@ export const BGI = styled.Image`
   position: absolute;
   top: 5px;
   opacity: 0.1;
-  height: 220px;
+  height: 260px;
 `;
