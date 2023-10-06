@@ -6,4 +6,8 @@ export const CardDiv = styled(View)`
   background-color: #8c5319;
   height: 350px;
   width: 250px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 80px;
 `;
