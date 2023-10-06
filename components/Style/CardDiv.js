@@ -10,4 +10,5 @@ export const CardDiv = styled(View)`
   flex-direction: row;
   justify-content: center;
   margin-top: 80px;
+  position: relative;
 `;
