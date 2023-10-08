@@ -7,6 +7,8 @@ import { CardNameDiv } from "../style/CardNameDiv";
 import { RatingDiv } from "../style/RatingDiv";
 import { VolumeDiv } from "../style/VolumeDiv";
 import { PriceText } from "../style/PriceText";
+import { PlusButton } from "../style/PlusButton";
+
 const CoffeeCard = ({ item }) => {
   return (
     <CardDiv>
@@ -33,7 +35,27 @@ const CoffeeCard = ({ item }) => {
           <Text style={{ marginRight: 5, color: "#fff" }}>Volume</Text>
           <Text style={{ color: "#fff", fontWeight: 800 }}>{item.volume}</Text>
         </VolumeDiv>
-        <PriceText>$ {item.price}</PriceText>
+        <View
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "space-between",
+            width: 210,
+            alignItems: "center",
+            marginTop: 60,
+          }}
+        >
+          <PriceText>$ {item.price}</PriceText>
+          <PlusButton>
+            <Image
+              source={require("../../assets/images/plus.png")}
+              style={{
+                width: 40,
+                height: 40,
+              }}
+            />
+          </PlusButton>
+        </View>
       </CardNameDiv>
     </CardDiv>
   );

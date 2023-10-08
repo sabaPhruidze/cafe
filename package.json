@@ -11,6 +11,7 @@
   "dependencies": {
     "@ant-design/icons": "^5.2.6",
     "@types/react": "~18.2.14",
+    "deprecated-react-native-prop-types": "^2.2.0",
     "expo": "~49.0.12",
     "expo-status-bar": "~1.6.0",
     "patch-package": "^8.0.0",
